@@ -111,6 +111,24 @@ public class TwoDArray {
         System.out.println("sum of the matrix is : " + sum);
     }
 
+    // Staircase Search -> O(m+n)
+    public static boolean staircaseSearch(int matrix[][], int key) {
+        int row = 0,col = matrix[0].length-1;
+        while(row < matrix.length && col >= 0) {
+            if (matrix[row][col] == key) {
+                System.out.println("key found at (" + row + "," + col + ")");
+                return true;
+            }
+            else if (key < matrix[row][col]) {
+                col--;
+            }
+            else{
+                row++;
+            }
+        }
+        System.out.println("element not found!");
+        return false;
+    }
     public static void display(int matrix[][]) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
@@ -143,6 +161,8 @@ public class TwoDArray {
                 { 9, 10, 11, 12 },
                 { 13, 14, 15, 16 } };
         // printSpiral(matrix);
-        diagonalSum(matrix);
+        // diagonalSum(matrix);
+        int key = 14;
+        staircaseSearch(matrix, key);
     }
 }
