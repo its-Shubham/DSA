@@ -98,7 +98,7 @@ public class TwoDArray {
 
         // optimised method -> O(n)
         int sum = 0;
-        for (int i = 0; i < matrix.length - 1; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             // primary diagonal
             sum += matrix[i][i];
 
