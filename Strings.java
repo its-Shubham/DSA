@@ -1,3 +1,4 @@
+
 public class Strings {
     // palindrome
     public static boolean palindrome(String str) {
@@ -33,11 +34,24 @@ public class Strings {
         return (float) Math.sqrt(x2 + y2);
     }
 
+    public static String subString(String str, int start, int end) {
+        String subString = "";
+        for (int i = start; i < end; i++) {
+            subString += str.charAt(i);
+        }
+        return subString;
+    }
+
     public static void main(String[] args) {
         // for palindrome
         // String str = "racecar";
         // System.out.println(palindrome(str));
-        String path = "WNEENESENNN";
-        System.out.println(getShortestPath(path));
+        // for shortest path
+        // String path = "WNEENESENNN";
+        // System.out.println(getShortestPath(path));
+        //for substring
+        // String str = "shubham";
+        // System.out.println(str.substring(0, 5));
+        // System.out.println(subString(str, 0, 5));
     }
 }
