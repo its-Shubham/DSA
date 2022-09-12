@@ -76,11 +76,12 @@ public class Strings {
         return sb.toString();
     }
 
+    // for compressing string -> T.C -> O(n)
     public static String compress(String str) {
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < str.length(); i++) {
             Integer count = 1;
-            while (str.charAt(i) == str.charAt(i + 1) && i < str.length() - 1) {
+            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
                 count++;
                 i++;
             }
@@ -89,7 +90,6 @@ public class Strings {
                 sb.append(count.toString());
             }
         }
-
         return sb.toString();
     }
 
@@ -120,7 +120,9 @@ public class Strings {
         // uppercase of every word in a sentence
         // String str="hi, i am shubham ";
         // System.out.println(toUpperCase(str));
-        String str = "abc";
+
+        //string compress
+        String str = "aaaabbcddd";
         System.out.println(compress(str));
     }
 }
