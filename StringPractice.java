@@ -1,3 +1,7 @@
+import java.util.concurrent.CountDownLatch;
+
+import javax.swing.text.AbstractDocument.LeafElement;
+
 public class StringPractice {
 
     // question 1
@@ -14,9 +18,24 @@ public class StringPractice {
 
     }
 
-    public static void main(String[] args) {
-        String str = "shubham";
-        System.out.println(vowelCount(str));
+    // question 4
+    // check anagram -> my approach  
+    public static boolean anagram(String str1, String str2) {
+        if (str1.length() == str2.length()) {
+            int sum1 = 0, sum2 = 0;
+            for (int i = 0; i < str1.length(); i++) {
+                sum1 += (int) str1.charAt(i);
+                sum2 += (int) str2.charAt(i);
+            }
+            if (sum1 == sum2) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public static void main(String[] args) {
+        String str1 = "study", str2 = "dusty";
+        System.out.println(anagram(str1, str2));
     }
 }
