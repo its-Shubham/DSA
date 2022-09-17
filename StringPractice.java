@@ -1,6 +1,3 @@
-import java.util.concurrent.CountDownLatch;
-
-import javax.swing.text.AbstractDocument.LeafElement;
 
 public class StringPractice {
 
@@ -19,9 +16,11 @@ public class StringPractice {
     }
 
     // question 4
-    // check anagram -> my approach  
+    // check anagram -> my approach--> high time complexity -->linear time complexity approach is available in assignment solution
     public static boolean anagram(String str1, String str2) {
         if (str1.length() == str2.length()) {
+            str1 = str1.toLowerCase();
+            str2 = str2.toLowerCase();
             int sum1 = 0, sum2 = 0;
             for (int i = 0; i < str1.length(); i++) {
                 sum1 += (int) str1.charAt(i);
