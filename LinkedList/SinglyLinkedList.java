@@ -136,7 +136,7 @@ public class SinglyLinkedList {
             return -1;
         }
 
-        while (temp.next != null) {
+        while (temp != null) {
             if (temp.data == key) {
                 return i;
             }
