@@ -148,6 +148,25 @@ public class SinglyLinkedList {
 
     }
 
+    public int helper(Node head, int key) {
+        if (head == null) {
+            return -1;
+        }
+        if (head.data == key) {
+            return 0;
+        }
+        int index = helper(head.next, key);
+        if (index == -1) {
+            return -1;
+        }
+
+        return index + 1;
+    }
+
+    public int recSearch(int key) {
+        return helper(head, key);
+    }
+
     public int getSize(){
         return size;
     }

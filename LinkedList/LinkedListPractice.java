@@ -18,7 +18,7 @@ public class LinkedListPractice {
         System.out.println("size is -> " + ll.getSize());
         System.out.println(ll.deleteAtIndex(3));
         System.out.println("Key found at "+ll.itrSearch(10));
-        System.out.println("Key found at "+ll.itrSearch(20));
+        System.out.println("Key found at "+ll.recSearch(20));
         ll.print();
     }
 }
